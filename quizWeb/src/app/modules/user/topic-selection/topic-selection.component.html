@@ -1,0 +1,19 @@
+<h2 class="title">Choose a Topic</h2>
+
+<div class="topic-grid">
+  <div class="topic-card" *ngFor="let topic of topics" (click)="startQuiz(topic)">
+    
+    <!-- ✅ Optional image support (uncomment if you add images in TS) -->
+    <!--
+    <div class="image-wrapper">
+      <img [src]="topic.image" alt="{{ topic.name }}" />
+    </div>
+    -->
+
+    <div class="topic-info">
+      <h3>{{ topic.name }}</h3>
+      <p>{{ topic.description }}</p>
+    </div>
+
+  </div>
+</div>

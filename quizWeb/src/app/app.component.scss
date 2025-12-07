@@ -1,0 +1,59 @@
+/* app.component.scss */
+
+/* Header styling */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 64px;
+    background-color: #003973; /* Already inline, optional here */
+  }
+  
+  /* App title link */
+  .main-header a[routerLink="/Login"] {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bolder;
+    text-decoration: none;
+  }
+  
+  /* Navigation links container */
+  .nav-Links {
+    display: flex;
+    gap: 20px; /* spacing between links */
+  }
+  
+  /* Navigation links styling */
+  .nav-Links a {
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  /* Hover effect for links */
+  .nav-Links a:hover {
+    color: #1890ff; /* NG-Zorro primary color */
+  }
+  
+  /* Active router link */
+  .nav-Links a.active {
+    color: #1890ff;
+    font-weight: bolder;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .main-header {
+      flex-direction: column;
+      height: auto;
+      padding: 10px 20px;
+    }
+  
+    .nav-Links {
+      margin-top: 10px;
+      gap: 10px;
+    }
+  }
+  

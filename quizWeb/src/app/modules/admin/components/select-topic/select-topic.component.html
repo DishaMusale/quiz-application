@@ -1,0 +1,19 @@
+<h2 class="title">Choose a Topic ({{ level | titlecase }})</h2>
+
+<div class="topic-grid">
+  <div 
+    class="topic-card" 
+    *ngFor="let topic of topics" 
+    (click)="openTests(topic)"
+  >
+    <div class="topic-info">
+      <h3>{{ topic.name }}</h3>
+      <p>{{ topic.description }}</p>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Show message if no topics available -->
+<div *ngIf="topics.length === 0" class="no-topics">
+  <p>No topics available for {{ level | titlecase }} level.</p>
+</div>

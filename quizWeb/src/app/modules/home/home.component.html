@@ -1,0 +1,237 @@
+<!-- Hero Section -->
+<div class="hero reveal">
+  <div class="hero-background">
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+  </div>
+  
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-icon">🚀</span>
+      <span class="badge-text">Welcome to the Future of Learning</span>
+    </div>
+    
+    <h1>Welcome to <span class="brand">QuizWeb</span> 🎓</h1>
+    <p class="tagline">
+      Test your knowledge, compete with friends, and climb the leaderboard! 
+      Master DSA concepts through interactive quizzes.
+    </p>
+
+    <div class="cta-buttons">
+      <button class="btn btn-primary" routerLink="/login">
+        <span>Start Quiz</span>
+        <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button class="btn btn-outline">
+        <span>Explore Quizzes</span>
+      </button>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-number">50K+</div>
+        <div class="stat-label">Active Users</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-number">2K+</div>
+        <div class="stat-label">DSA Problems</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Competitions</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Features Section -->
+<section class="features-section reveal">
+  <div class="features-header">
+    <div class="section-badge">
+      <span class="badge-dot"></span>
+      <span class="badge-text">Features</span>
+    </div>
+    <h2 class="section-heading">
+      Everything You Need To 
+      <span class="gradient-text">Excel</span>
+    </h2>
+    <p class="section-description">
+      Powerful features designed to enhance your learning experience
+    </p>
+  </div>
+
+  <div class="features">
+    <div class="feature-card">
+      <div class="feature-icon-wrapper">
+        <span class="feature-icon">📚</span>
+      </div>
+      <h3>Multiple Quizzes</h3>
+      <p>Choose from different categories and levels tailored to your skill.</p>
+      <div class="feature-arrow">→</div>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-icon-wrapper">
+        <span class="feature-icon">⏱</span>
+      </div>
+      <h3>Timed Challenges</h3>
+      <p>Beat the clock while answering questions and improve your speed.</p>
+      <div class="feature-arrow">→</div>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-icon-wrapper">
+        <span class="feature-icon">🏆</span>
+      </div>
+      <h3>Leaderboard</h3>
+      <p>See how you rank against other players and compete globally.</p>
+      <div class="feature-arrow">→</div>
+    </div>
+    
+    <div class="feature-card">
+      <div class="feature-icon-wrapper">
+        <span class="feature-icon">🔐</span>
+      </div>
+      <h3>Secure Login</h3>
+      <p>Save your scores and track progress safely with encryption.</p>
+      <div class="feature-arrow">→</div>
+    </div>
+  </div>
+</section>
+
+<!-- Enhanced About Section -->
+<section class="about-section reveal">
+  <div class="about-container">
+    
+    <!-- Left Side - Image with decorative elements -->
+    <div class="about-left">
+      <div class="image-wrapper">
+        
+        <!-- Floating decorative shapes -->
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        
+        <!-- Main image -->
+        <img src="assets/about-quiz.svg" alt="About QuizWeb" class="about-img">
+        
+        <!-- Stats badges overlay -->
+        <div *ngFor="let badge of statBadges" 
+             class="stats-badge"
+             [ngClass]="badge.position">
+          <span class="stat-number">{{ badge.number }}</span>
+          <span class="stat-label">{{ badge.label }}</span>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Right Side - Content -->
+    <div class="about-right">
+      
+      <!-- Section tag -->
+      <div class="section-tag">
+        <span class="tag-icon">✨</span>
+        <span class="tag-text">About Us</span>
+      </div>
+
+      <!-- Title -->
+      <h2 class="about-title">
+        Transforming Learning Into An 
+        <span class="gradient-text">Engaging Experience</span>
+      </h2>
+
+      <!-- Description -->
+      <p class="about-description">
+        QuizWeb is more than just a quiz platform—it's a community where learners 
+        challenge themselves, compete with peers, and master Data Structures & Algorithms 
+        through interactive problem-solving.
+      </p>
+
+      <!-- Feature Cards -->
+      <div class="feature-cards">
+        <div *ngFor="let card of featureCards" 
+             class="feature-card"
+             [ngClass]="card.colorClass">
+          <div class="feature-icon">
+            <span>{{ card.icon }}</span>
+          </div>
+          <div class="feature-content">
+            <h4 class="feature-title">{{ card.title }}</h4>
+            <p class="feature-text">{{ card.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="about-actions">
+        <button class="btn btn-primary-gradient" (click)="onExploreQuizzes()">
+          <span>Explore Quizzes</span>
+          <svg class="btn-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="btn btn-secondary-outline" (click)="onLearnMore()">
+          <span>Learn More</span>
+        </button>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section reveal">
+  <div class="cta-banner">
+    <div class="cta-icon">🎯</div>
+    <h2>Ready to Ace Your Interviews?</h2>
+    <p>Join thousands of developers preparing for top tech companies with our comprehensive DSA quiz platform.</p>
+
+    <button class="cta-main-btn">
+      <span>Start Your Journey Free</span>
+      <svg class="cta-btn-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <div class="cta-features">
+      <div class="cta-feature-item">
+        <span class="check-icon">✓</span>
+        <span>No credit card required</span>
+      </div>
+      <div class="cta-feature-item">
+        <span class="check-icon">✓</span>
+        <span>1000+ practice problems</span>
+      </div>
+      <div class="cta-feature-item">
+        <span class="check-icon">✓</span>
+        <span>24/7 support</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer reveal">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <h3>QuizWeb</h3>
+      <p>Empowering learners worldwide</p>
+    </div>
+    <div class="footer-links">
+      <a href="#">About</a>
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 QuizWeb | Learning never exhausts the mind.</p>
+  </div>
+</footer>

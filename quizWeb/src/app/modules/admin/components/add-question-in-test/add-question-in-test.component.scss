@@ -1,0 +1,42 @@
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  .child {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  /* Make labels bold and left-aligned */
+  .login-form nz-form-label {
+    font-weight: 600;
+    text-align: left;
+    color: #333;
+  }
+  
+  /* Add spacing between items */
+  .login-form nz-form-item {
+    margin-bottom: 16px;
+  }
+  
+  .login-form-button {
+    width: 100%;          /* full width */
+    padding: 14px 0;      /* taller button */
+    font-size: 16px;      /* larger text */
+    border-radius: 8px;
+    font-weight: 600;
+  
+    display: flex;         /* make it flex */
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
+    text-align: center;      /* fallback */
+  }

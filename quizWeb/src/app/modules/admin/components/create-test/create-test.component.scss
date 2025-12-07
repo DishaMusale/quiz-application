@@ -1,0 +1,76 @@
+/* Background styling */
+.bg {
+    background-color: #f8f8f8;
+    min-height: 100vh; /* full screen height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Parent container */
+  .parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Form box */
+  .child {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px; /* wider form */
+  }
+  
+  /* Form row: label on left, input on right */
+  .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Label styling */
+  .form-row label {
+    width: 180px; /* fixed width for labels */
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    margin-right: 12px;
+    text-align: right;
+  }
+  
+  /* Input & textarea take remaining space */
+  .form-row input,
+  .form-row textarea {
+    flex: 1;
+    border-radius: 6px;
+    border: 1px solid #d9d9d9;
+    padding: 10px 12px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Focus effect */
+  .form-row input:focus,
+  .form-row textarea:focus {
+    border-color: #1677ff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.2);
+  }
+  
+  /* Submit button */
+  .login-form-button {
+    width: 100%;
+    height: 42px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+
+  
+  

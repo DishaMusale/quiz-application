@@ -1,0 +1,58 @@
+<div class="bg" style="background-color: #f8f8f8;">
+  <div class="parent">
+    <div class="child">
+
+      <form nz-form [formGroup]="testForm" (ngSubmit)="submitForm()">
+
+        <!-- TITLE -->
+        <nz-form-label [nzNoColon]="true">Title</nz-form-label>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="This input is required">
+            <input type="text" nz-input formControlName="title" placeholder="Enter test title" />
+          </nz-form-control>
+        </nz-form-item>
+
+        <!-- LEVEL (read-only) -->
+        <nz-form-label [nzNoColon]="true">Level</nz-form-label>
+        <nz-form-item>
+          <nz-form-control>
+            <input nz-input formControlName="level" placeholder="Level" />
+          </nz-form-control>
+        </nz-form-item>
+
+        <!-- TOPIC (read-only) -->
+        <nz-form-label [nzNoColon]="true">Topic</nz-form-label>
+        <nz-form-item>
+          <nz-form-control>
+            <input nz-input formControlName="topic" placeholder="Topic" />
+          </nz-form-control>
+        </nz-form-item>
+
+        <!-- TIME -->
+        <nz-form-label [nzNoColon]="true">Time Per Question</nz-form-label>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="This input is required">
+            <input type="number" nz-input formControlName="time" placeholder="Seconds per question" />
+          </nz-form-control>
+        </nz-form-item>
+
+        <!-- DESCRIPTION -->
+        <nz-form-label [nzNoColon]="true">Description</nz-form-label>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="This input is required">
+            <textarea rows="4" nz-input formControlName="description" placeholder="Enter description"></textarea>
+          </nz-form-control>
+        </nz-form-item>
+
+        <!-- SUBMIT -->
+        <div style="padding-bottom: 30px;">
+          <button nz-button class="login-form-button login-form-margin" nzType="primary">
+            Submit
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
